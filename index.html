@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reading List Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <h1>📚 Reading List Manager</h1>
+      <p class="tagline">Track books you want to read, are reading, and have finished.</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+
+      <!-- Stats -->
+      <div class="stats" id="stats"></div>
+
+      <!-- Add Form -->
+      <form class="add-form" id="addForm">
+        <input type="text" id="title" placeholder="Book title" required />
+        <input type="text" id="author" placeholder="Author" required />
+        <select id="status">
+          <option value="to-read">To Read</option>
+          <option value="reading">Reading</option>
+          <option value="finished">Finished</option>
+        </select>
+        <button type="submit">＋ Add Book</button>
+      </form>
+
+      <!-- Controls -->
+      <div class="controls">
+        <div class="tabs" id="tabs">
+          <button class="tab active" data-filter="all">All</button>
+          <button class="tab" data-filter="to-read">To Read</button>
+          <button class="tab" data-filter="reading">Reading</button>
+          <button class="tab" data-filter="finished">Finished</button>
+        </div>
+        <div class="right-controls">
+          <input type="search" id="search" placeholder="🔍 Search title or author…" />
+          <select id="sortBy">
+            <option value="newest">Newest First</option>
+            <option value="title">Title (A–Z)</option>
+            <option value="rating">Rating (High → Low)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- List -->
+      <ul class="book-list" id="bookList"></ul>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="small">Reading List Manager</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
